@@ -26,6 +26,8 @@ Skaffold forwards Kubernetes resources on your cluster to your local machine por
 
 ![GitHub Logo](/images/localhost.png)
 
+Also, MySQL is reachable at localhost port 3306
+
 All resources will be deleted if you hit **CTRL+C** except persistent volume and persistent volume claim that stores MySQL data.
 
 After the first installation, there is no need to run ./installation.sh, but it does not affect your environment if you run ./installation.sh again.
