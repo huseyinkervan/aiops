@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-server
+spec:
+  selector:
+    matchLabels:
+      run: app-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: app-server
+    spec:
+      containers:
+      - name: app-server
+        image: huseyinkervan/aiops
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-server
+  labels:
+    run: app-server
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+  selector:
+    run: app-server
