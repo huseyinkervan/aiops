@@ -34,8 +34,8 @@ All resources will be deleted if you press **CTRL+C** except persistent volume a
 
 After the first installation, there is no need to run ./installation.sh, but it does not affect your environment if you run ./installation.sh again.
 
-Use **skaffold dev** to build and deploy your app every time your code changes
+Use **skaffold dev --port-forward** to build and deploy your app every time your code changes
 
-Use **skaffold run** to build and deploy your app once, similar to a CI/CD pipeline
+Use **skaffold run --port-forward** to build and deploy your app once, similar to a CI/CD pipeline
 
 Use **skaffold delete** to delete your environment.
